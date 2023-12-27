@@ -1,0 +1,32 @@
+@media only screen and (max-width: 1600px) {
+  /* #foo {
+      color: rgb(175, 48, 48);
+    } */
+
+  .intro__text {
+    width: 45vw;
+    margin: 0 auto;
+    margin-top: 10.4vh;
+    position: relative;
+    z-index: 10;
+  }
+
+  .intro__title {
+    margin-bottom: 1.6rem;
+    position: relative;
+  }
+
+  .intro__images img:nth-child(3) {
+    top: 68vh;
+    left: 54.5vw;
+  }
+
+  .intro__images.initial img {
+    top: 50%;
+    left: 50%;
+    transform-origin: center center;
+  }
+
+  /* - - - - - - - - - - - - - - - - - - - - */
+  /* SPLIT NOW PAGE */
+}

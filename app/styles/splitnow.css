@@ -1,0 +1,55 @@
+/* .key_insight_desk {
+  width: 100%;
+  margin-top: 3rem;
+} */
+
+.key_insight_desk {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.key_insight_desk img {
+  width: 65%;
+}
+
+.key_insight p span {
+  font-family: "Switzer";
+  font-weight: 800;
+}
+
+.key_solution {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.key_solution img {
+  display: inline-block;
+  width: 300px;
+}
+
+/* Design Exploration */
+.para_starter p {
+  margin-top: 0.6rem;
+}
+
+.design_varients {
+  width: 100%;
+}
+
+.design_varients img {
+  width: 100%;
+}
+
+.design_improve_img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  padding: 2rem 0rem;
+}
+
+.design_improve_img img {
+  width: 70%;
+}

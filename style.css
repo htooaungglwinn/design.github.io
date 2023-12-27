@@ -1,0 +1,477 @@
+@import "./app//styles/_variables.css";
+@import "./app/styles/_fonts.css";
+@import "./app/styles/_utalities.css";
+
+/* Fonts */
+/* @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"); */
+/* @import url("https://fonts.cdnfonts.com/css/coolvetica-2");
+@import url("https://fonts.cdnfonts.com/css/switzer"); */
+
+body {
+  overflow: auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Coolvetica", sans-serif;
+  /* font-family: "Switzer", sans-serif; */
+  font-weight: 700;
+}
+
+p {
+  font-family: "Switzer", sans-serif;
+  font-weight: 300;
+}
+
+.scroll {
+  width: 100%;
+  height: 100vh;
+}
+
+/* intro */
+.intro {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+#nav {
+  position: absolute;
+  left: 8%;
+}
+
+#nav div {
+  overflow: hidden;
+}
+
+/* nav */
+.nav_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0rem;
+}
+
+#nav img {
+  z-index: 1000;
+  box-shadow: none;
+  position: relative;
+  z-index: 1000;
+  transform: translateY(70px);
+}
+
+#nav .icon_container img {
+  width: 32px;
+}
+
+#nav #brand_logo {
+  width: 128px;
+}
+
+.icon_container {
+  display: flex;
+  gap: 1rem;
+}
+
+.intro__text {
+  width: 45vw;
+  margin: 0 auto;
+  margin-top: 14.4vh;
+  position: relative;
+  z-index: 10;
+}
+
+.title_gif-wrapper {
+  display: flex;
+  justify-content: left;
+  position: relative;
+  /* background-color: azure; */
+  display: inline-block;
+  cursor: pointer;
+}
+
+.intro__title {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.intro__title span {
+  font-size: 8.2rem;
+  line-height: 130%;
+  color: var(--text-color-black);
+}
+
+.intro__sub-title p {
+  width: 35ch;
+  font-family: "Switzer";
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 130%;
+  margin-left: auto;
+  /* mix-blend-mode: difference;
+  color: black; */
+}
+
+/* images */
+
+.intro img {
+  position: absolute;
+  z-index: 1;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Setting up widths */
+.intro__images img:nth-child(1) {
+  width: 18%;
+  height: auto;
+  transform: scale(1);
+  will-change: transform;
+}
+
+.intro__images img:nth-child(2) {
+  width: 20%;
+  height: auto;
+  transform: scale(1);
+  will-change: transform;
+}
+
+.intro__images img:nth-child(3) {
+  width: 20%;
+  height: auto;
+  transform: scale(1);
+  will-change: transform;
+}
+
+/* FINAL Position */
+.intro__images img:nth-child(1) {
+  top: 13vh;
+  right: -4vw;
+  /* transform-origin: center center; */
+}
+
+.intro__images img:nth-child(2) {
+  top: 48vh;
+  left: -1.3vw;
+  /* transform-origin: center center; */
+}
+
+.intro__images img:nth-child(3) {
+  top: 60vh;
+  left: 54.5vw;
+  /* transform-origin: center center; */
+}
+
+/* Initial Position */
+.intro__images.initial img {
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
+}
+
+/* Full width Images */
+.fullwidth-image {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  clip-path: polygon(5% 10%, 95% 10%, 95% 90%, 5% 90%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fullwidth-image img {
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  /* transform: translateY(-20%); */
+}
+
+.fullwidth-image__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background-color: rgb(0, 0, 0);
+  opacity: 0;
+}
+
+.fullwidth-image__text {
+  position: relative;
+  top: 0;
+  left: 0%;
+  z-index: 10;
+  color: white;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fullwidth-image__text h2 {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.fullwidth-image h2 {
+  font-family: "Coolvetica";
+  font-weight: 700;
+  font-size: 6.4rem;
+  margin-bottom: 1.6rem;
+}
+
+/* Projects */
+.projects_section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15rem;
+  margin: 13rem 0rem;
+}
+
+.project__container {
+  width: 84vw;
+  height: 90vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.project__details {
+  width: 39.9%;
+  height: 100%;
+  /* display: inline-block; */
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.project__details > div {
+  overflow: hidden;
+}
+
+.project__details h1 {
+  font-size: 4.6rem;
+  margin-bottom: 20px;
+  color: var(--text-color-black);
+}
+.project__details h2 {
+  font-size: 8.2rem;
+  position: absolute;
+  bottom: -2.1rem;
+  left: -28px;
+  transform: rotateZ(-90deg);
+}
+
+.divider-line {
+  width: 42%;
+  height: 2px;
+  background-color: var(--project-divider-line);
+  margin: 40px 0px;
+}
+
+.project__details h3,
+.project__details p {
+  font-family: "Switzer";
+  font-weight: 300;
+  font-size: 1.1rem;
+  max-width: 36ch;
+}
+
+/* .project__details p {
+  font-family: "Switzer";
+  font-weight: 300;
+  font-size: 1.1rem;
+  max-width: 36ch;
+} */
+
+.project__cta-wrapper {
+  width: auto;
+  height: auto;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.project__cta {
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Switzer";
+  font-weight: 500;
+  line-height: 130%;
+  /* letter-spacing: 0.4px; */
+  font-size: 1.1rem;
+  margin-top: 40px;
+  color: var(--text-color-black);
+  border-bottom: 2px solid var(--project-cta-border);
+  padding: 10px 0px;
+  transform: translateY(70px);
+}
+
+/* .project__cta::after {
+  content: attr(data-text);
+} */
+
+.footer-line {
+  width: 80%;
+  height: 5px;
+  background-color: var(--project-footer-line);
+  position: absolute;
+  bottom: 0;
+  left: 8.5rem;
+}
+
+.project__image {
+  width: 90vh;
+  height: 100%;
+  overflow: hidden;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.project__image img {
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 100% 0%;
+}
+
+/* Footer */
+.footer .container {
+  padding: 6rem 0rem;
+  /* height: 90vh; */
+  position: relative;
+}
+
+.footer {
+  background-color: var(--footer-bg-color);
+}
+
+.footer__header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer__img-wrapper {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  display: inline-block;
+  border-radius: 100%;
+}
+
+.footer__header img {
+  width: 120%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer__header h2 {
+  font-family: "Coolvetica";
+  font-weight: 300;
+  font-size: 3.3rem;
+}
+
+.footer__divider-line {
+  width: 100%;
+  height: 4px;
+  background-color: var(--footer-divider-line);
+  margin: 4rem 0rem;
+}
+
+/* Footer details wrapper */
+.footer__details-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+}
+
+/* Footer Left Column */
+.footer__details-resume {
+  width: 40%;
+}
+
+.footer__resume-link {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: var(--text-color-black);
+  margin-top: 2rem;
+}
+
+.footer__resume-link a {
+  text-decoration: none;
+  margin-left: 0.3rem;
+  color: var(--text-color-black);
+}
+
+.feather-arrow-up-right {
+  width: 24px;
+  height: 24px;
+  margin-top: 1.8px;
+  stroke-width: 2.5px;
+}
+
+/* Footer detials (Right column) */
+.footer__details-links {
+  width: 45%;
+}
+
+.footer__details-links p {
+  width: 46ch;
+}
+
+.footer__details__links-wrapper {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem;
+  position: relative;
+}
+
+.footer-link {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.footer-link a {
+  color: var(--text-color-black);
+}
+
+.footer-link svg {
+  stroke-width: 2.5px;
+}
+
+/* Fab icon */
+.fab-icon-wrapper {
+  position: absolute;
+  right: 4rem;
+  bottom: 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.1rem;
+}
+
+.fab-icon-wrapper a {
+  text-decoration: none;
+  font-family: "Switzer";
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: var(--text-color-black);
+}
+
+.fab-icon-wrapper svg {
+  stroke-width: 1px;
+}

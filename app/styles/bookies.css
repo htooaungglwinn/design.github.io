@@ -1,0 +1,21 @@
+/* Problem */
+.problem_img_wrapper img {
+  width: 100%;
+}
+
+.themes_wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.themes_wrapper div {
+  width: 48%;
+  margin-bottom: 2rem;
+}
+
+.design_solution ul {
+  max-width: 90%;
+}
+
+/* Thank you section */

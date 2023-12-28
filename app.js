@@ -190,6 +190,17 @@ class App {
           stagger: 0.8,
         });
       });
+
+      const brandLogo = document.querySelector("#brand_logo");
+      console.log(brandLogo);
+
+      brandLogo.addEventListener("mousehover", () => {
+        console.log("event ran");
+        // gsap.to(brandLogo, {
+        //   scale: 1,
+        //   duration: 0.1,
+        // });
+      });
     }
   }
 

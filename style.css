@@ -38,8 +38,10 @@ p {
 }
 
 #nav {
-  position: absolute;
+  position: static;
   left: 8%;
+  /* background-color: rgb(117, 117, 248); */
+  /* border: 1px solid grey; */
 }
 
 #nav div {
@@ -63,7 +65,7 @@ p {
 }
 
 #nav .icon_container img {
-  width: 32px;
+  width: 24px;
 }
 
 #nav #brand_logo {
@@ -72,15 +74,17 @@ p {
 
 .icon_container {
   display: flex;
-  gap: 1rem;
+  gap: 0.8rem;
 }
 
 .intro__text {
   width: 45vw;
   margin: 0 auto;
-  margin-top: 14.4vh;
+  margin-top: 0vh;
   position: relative;
   z-index: 10;
+  /* border: 1px solid red; */
+  bottom: 5.6rem;
 }
 
 .title_gif-wrapper {
@@ -110,8 +114,6 @@ p {
   font-size: 1.4rem;
   line-height: 130%;
   margin-left: auto;
-  /* mix-blend-mode: difference;
-  color: black; */
 }
 
 /* images */

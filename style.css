@@ -84,7 +84,7 @@ p {
   position: relative;
   z-index: 10;
   /* border: 1px solid red; */
-  bottom: 5.6rem;
+  /* bottom: 3.6rem; */
 }
 
 .title_gif-wrapper {
@@ -160,7 +160,7 @@ p {
 }
 
 .intro__images img:nth-child(3) {
-  top: 60vh;
+  top: 54.8vh;
   left: 54.5vw;
   /* transform-origin: center center; */
 }

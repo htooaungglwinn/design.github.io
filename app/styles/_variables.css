@@ -7,9 +7,10 @@
   --color-black-400: #121314;
 
   /* Color - grey-scale */
-  --color-grey-02: rgba(0, 0, 0, 0.2);
+  --color-grey-015: rgba(0, 0, 0, 0.15);
   --color-grey-08: rgba(0, 0, 0, 0.8);
   --color-grey-20: #fbfbfb;
+  --color-grey-30: #f1f1f1;
   --color-grey-50: #eeeeee;
   --color-grey-100: #e6e6e6;
   --color-grey-400: #676767;
@@ -21,7 +22,7 @@
   /* --- DESIGN TOKENS --- */
   /* --------------------- */
   /* BACKGROUNDS */
-  --bg-color-light: var(--color-grey-20);
+  --bg-color-light: var(--color-grey-30);
 
   /* Colors - Utalities */
   --color-highlight: var(--color-violet-400);
@@ -31,8 +32,8 @@
   --text-color-light: var(--color-grey-20);
 
   /* PROJECT SECTION */
-  --project-divider-line: var(--color-grey-02);
-  --project-footer-line: var(--color-grey-02);
+  --project-divider-line: var(--color-grey-015);
+  --project-footer-line: var(--color-grey-015);
   --project-cta-border: var(--color-black-400);
 
   /* FOOTER SECTION */

@@ -31,6 +31,7 @@ class App {
 
       this._createprojects();
       this._createProjectSectionTag();
+      this._createEvents();
     }
 
     // this._createHomeIntro();
@@ -129,16 +130,15 @@ class App {
     gsap.set(this.images, {
       xPercent: -50,
       yPercent: -50,
-      y: 70,
     });
   }
 
   _fadeUpImages() {
     // without onComplete callback, both animations will start at once
     return gsap.to([this.images], {
-      y: 0,
+      y: 1,
       opacity: 1,
-      duration: 1.5,
+      duration: 1.3,
       ease: "expos.inout",
       stagger: 0.1,
       onComplete: () => this._animateImages(),
@@ -192,7 +192,6 @@ class App {
       });
 
       const brandLogo = document.querySelector("#brand_logo");
-      console.log(brandLogo);
 
       brandLogo.addEventListener("mousehover", () => {
         console.log("event ran");
@@ -270,8 +269,17 @@ class App {
                               <h3><p>${project.detail}</p></h3>
                               <div class="divider-line"></div>
                               <p class="project-description">${project.title}</p>
-                              <div class="project__cta-wrapper">
-                                <a href="#" class="project__cta" data-text=" Case Study">View ${project.type}</a>
+                              <div class="project_cta_container">
+                                <div class="project__cta-wrapper">
+                                  <a href="#" class="project__cta" data-text=" Case Study">View ${project.type}
+                                  <svg class="project_cta_icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" 
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+                                    stroke-linejoin="round" class="feather feather-arrow-up-right">
+                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                    <polyline points="7 7 17 7 17 17"></polyline></svg>
+                                  </a>
+                                  <div class="project_cta_line"></div>
+                                </div>
                               </div>
                               <h2>0${project.projectId}</h2>
                               <div class="footer-line"></div>
@@ -301,7 +309,12 @@ class App {
       projectWrapperTags.forEach((projectWrapper) => {
         const dividerLine = projectWrapper.querySelector(".divider-line");
         const footerLine = projectWrapper.querySelector(".footer-line");
+        const cta_wrapper = projectWrapper.querySelector(
+          ".project__cta-wrapper"
+        );
         const projectCta = projectWrapper.querySelector(".project__cta");
+        const project_cta_line =
+          projectWrapper.querySelector(".project_cta_line");
         const projectHeader = projectWrapper.querySelector(
           ".project__details h1"
         );
@@ -325,6 +338,7 @@ class App {
         gsap.set(footerLine, { scaleX: 0, transformOrigin: "left center" });
         gsap.set(projectSubtitle, { opacity: 0 });
         gsap.set(projectDescription, { opacity: 0 });
+        gsap.set(project_cta_line, { y: 100, opacity: 0 });
 
         tl.to(projectHeader, { y: 0, ease: "back.out" })
           .to(projectSubtitle, { opacity: 1 }, 0 + 0.1)
@@ -332,10 +346,65 @@ class App {
           .to(dividerLine, { scaleX: 1 }, 0 + 0.1)
           .to(projectCta, { y: 0, ease: "back.out(2)" }, 0 + 0.1)
           .to(footerLine, { scaleX: 1 }, 0 + 0.3);
+
+        // project events
+        cta_wrapper.addEventListener("mouseover", () => {
+          console.log("Mouse is hovering");
+          const t = gsap.to(project_cta_line, {
+            duration: 0.4,
+            y: 0,
+            opacity: 1,
+          });
+          t.play();
+        });
+        cta_wrapper.addEventListener("mouseleave", () => {
+          console.log("Mouse has left");
+          const t = gsap.to(project_cta_line, {
+            duration: 2,
+            y: 100,
+            opacity: 0,
+            ease: "expos.out",
+          });
+          t.play();
+        });
+
+        // Project Events
+        // cta_container.addEventListener("mouseover", () => {
+        //   gsap.to(projectHeader, {
+        //     color: "#ff2400",
+        //   });
+        // });
       });
-      // end of condition
+      // - - - - - - - - - - - - - - - - - - - - - - - -
     });
-  }
+  } // end of _createProjectSection
+
+  _createEvents() {
+    // Nav Images Hover effects
+    if (this.navImages) {
+      const socialIcons = [...document.querySelectorAll(".icon_container img")];
+
+      socialIcons.forEach((socialIcon) => {
+        socialIcon.addEventListener("mouseover", () => {
+          gsap.to(socialIcon, {
+            opacity: 0.75,
+            duration: 0.15,
+          });
+        });
+        socialIcon.addEventListener("mouseleave", () => {
+          gsap.to(socialIcon, {
+            opacity: 1,
+            duration: 0.1,
+          });
+        });
+      });
+    }
+    // Project CTA Events Reveal
+    if (this.project__wrapper) {
+      const projectButton = document.querySelector(".project__cta");
+      console.log(projectButton);
+    }
+  } // end of createEvents
 }
 
 // Initialize App after the document is fully loaded

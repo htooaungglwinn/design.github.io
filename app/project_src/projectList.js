@@ -8,7 +8,7 @@ export default class ProjectList {
         detail: "Product design | August 2023",
         title: "An app that helps users to save time when dividing expenses",
         coverImage: "./public/images/Project Mobile App Mockup.png",
-        pagelink: "./app/pages/splitnow.html",
+        pagelink: "./app/pages/splitnow",
       },
       {
         name: "Bookies",
@@ -17,7 +17,7 @@ export default class ProjectList {
         detail: "Product design | January 2022",
         title: "A more efficient way to save money on books",
         coverImage: "./public/images/Project Bookies Cover.png",
-        pagelink: "./app/pages/bookies.html",
+        pagelink: "./app/pages/bookies",
       },
       {
         name: "Grow A Wish",

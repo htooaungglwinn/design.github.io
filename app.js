@@ -312,6 +312,8 @@ class App {
         const cta_wrapper = projectWrapper.querySelector(
           ".project__cta-wrapper"
         );
+        const projectCtaIcon =
+          projectWrapper.querySelector(".project_cta_icon");
         const projectCta = projectWrapper.querySelector(".project__cta");
         const project_cta_line =
           projectWrapper.querySelector(".project_cta_line");
@@ -349,23 +351,32 @@ class App {
 
         // project events
         cta_wrapper.addEventListener("mouseover", () => {
-          console.log("Mouse is hovering");
-          const t = gsap.to(project_cta_line, {
-            duration: 0.4,
-            y: 0,
-            opacity: 1,
-          });
-          t.play();
+          const tl = gsap.timeline({ ease: "expos.out" });
+          tl.to(projectCta, {
+            duration: 0.05,
+            color: "var(--color-violet-400)",
+          }).to(
+            projectCtaIcon,
+            {
+              yPercent: -20,
+            },
+            "0"
+          );
+          tl.play();
         });
         cta_wrapper.addEventListener("mouseleave", () => {
-          console.log("Mouse has left");
-          const t = gsap.to(project_cta_line, {
-            duration: 2,
-            y: 100,
-            opacity: 0,
-            ease: "expos.out",
-          });
-          t.play();
+          const tl = gsap.timeline({ ease: "expos.out" });
+          tl.to(projectCta, {
+            duration: 0.03,
+            color: "var(--text-color-dark)",
+          }).to(
+            projectCtaIcon,
+            {
+              yPercent: 0,
+            },
+            "0"
+          );
+          tl.play();
         });
 
         // Project Events

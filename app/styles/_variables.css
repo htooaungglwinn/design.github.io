@@ -17,6 +17,7 @@
 
   /* Color - utalities */
   --color-violet-400: rgb(117, 24, 204);
+  --color-slateblue-400: #283c4d;
 
   /* --------------------- */
   /* --- DESIGN TOKENS --- */
@@ -35,6 +36,7 @@
   --project-divider-line: var(--color-grey-015);
   --project-footer-line: var(--color-grey-015);
   --project-cta-border: var(--color-black-400);
+  --cta-color-hover: var(--color-violet-400)
 
   /* FOOTER SECTION */
   --footer-bg-color: var(--color-grey-50);

@@ -330,10 +330,9 @@
 
   .main_column p {
     font-family: "Switzer";
-    font-weight: 400;
     width: 100%;
     font-size: 1rem;
-    line-height: 150%;
+    /* line-height: 150%; */
   }
 
   .main_column ul li {
@@ -383,5 +382,16 @@
 
   .left_right_wrapper div img {
     width: 80%;
+  }
+
+  /* NikeXStussy Page */
+  .mockup_wrapper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .mockup_img {
+    width: 100%;
+    object-fit: cover;
   }
 }

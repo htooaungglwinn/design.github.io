@@ -17,7 +17,7 @@ export default class ProjectList {
         detail: "Product design | January 2022",
         title: "A more efficient way to save money on books",
         coverImage: "./public/images/Project Bookies Cover.png",
-        pagelink: "./app/pages/bookies",
+        pagelink: "./app/pages/bookies.html",
       },
       {
         name: "Grow A Wish",
@@ -36,7 +36,7 @@ export default class ProjectList {
         title:
           "Poster designs that enhance the look and feel of the Adidas Samba",
         coverImage: "./public/images/Project Samba Cover.png",
-        pagelink: "./app/pages/splitnow.html",
+        pagelink: "./app/pages/samba.html",
       },
       {
         name: "Nike Poster",
@@ -46,7 +46,7 @@ export default class ProjectList {
         title:
           "Experimenting the fusion of two grid systems by the Swiss Legend Josef Müller-Brockmann",
         coverImage: "./public/images/Nike Stussy Cover.png",
-        pagelink: "./app/pages/splitnow.html",
+        pagelink: "./app/pages/nikestussy.html",
       },
     ];
   }

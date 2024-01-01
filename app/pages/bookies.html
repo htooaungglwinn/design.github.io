@@ -26,28 +26,11 @@
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
   </head>
   <body>
-    <!-- <section id="nav">
-      <div class="container nav_wrapper">
-        <div class="logo_container">
-          <img src="../../public/assets/icons/KaiBryant.svg" alt="" />
-        </div>
-        <div class="icon_container">
-          <img
-            src="../../public/assets/icons/Instagram Icon.svg"
-            alt="instagram logo image"
-          />
-          <img
-            src="../../public/assets/icons/LinkedIn Icon.svg"
-            alt="LinkedIn logo image"
-          />
-        </div>
-      </div>
-    </section> -->
     <!-- Nav bar -->
-    <section id="nav">
+    <section class="case_study_nav">
       <div class="container nav_wrapper">
         <div class="logo_container">
-          <a href="../../index">
+          <a href="/">
             <img
               src="../../public/assets/icons/KaiBryant.svg"
               id="brand_logo"
@@ -79,7 +62,7 @@
       </div>
     </section>
     <!-- Hero Section -->
-    <section class="hero">
+    <section id="splitnow" class="hero">
       <div class="container">
         <!-- Web spiders -->
         <div class="web-spiders">
@@ -110,7 +93,7 @@
         <section class="hero_details">
           <div class="hero_cta_wrapper">
             <h3>Prototype</h3>
-            <a href="#">View Prototype</a>
+            <a href="#figma_prototype" class="proto_button">View Prototype</a>
           </div>
           <div>
             <h3>Role</h3>
@@ -179,11 +162,12 @@
             </p>
             <!-- content divider half-->
             <div class="content_divider_half"></div>
-            <div class="problem_img_wrapper">
-              <img
-                src="../../public/assets/projectSrc/bookies/Problem Statement.png"
-                alt=""
-              />
+            <div class="statement_wrapper problem">
+              <p class="statement_subtitle">- Problem Statement -</p>
+              <p class="statement_title">
+                "Is there a way to help avid-readers to keep up with the higher
+                book costs?""
+              </p>
             </div>
           </div>
         </div>
@@ -332,11 +316,13 @@
             </p>
             <!-- content divider half-->
             <div class="content_divider_half"></div>
-            <div class="problem_img_wrapper">
-              <img
-                src="../../public/assets/projectSrc/bookies/Hypothesis Statement.png"
-                alt=""
-              />
+            <div class="statement_wrapper hypothesis">
+              <p class="statement_subtitle">- Solution Statement -</p>
+              <p class="statement_title">
+                “If we create a book-rent app, then readers could save money as
+                renting books is more cost-effective than buying recreational
+                books ”
+              </p>
             </div>
           </div>
         </div>
@@ -610,7 +596,7 @@
         <!-- Outcomes + Keyscreens -->
         <div class="case_study_grid outcomes">
           <div class="title_column">
-            <h3>Competative Analysis</h3>
+            <h3>High-Fi mockups</h3>
           </div>
           <div class="main_column outcomes">
             <p>
@@ -651,7 +637,7 @@
                 <ul>
                   <li>
                     I’d love to rewind the design thinking process to do more
-                    branding and iterate the app in the business perspectives
+                    branding and iterate the app from the business perspectives
                     since there would be constraints and edge-cases in the real
                     projects.
                   </li>
@@ -665,26 +651,13 @@
                 <h4>Insights and iterations go hand in hand</h4>
                 <ul>
                   <li>
-                    One important thing I have learnt was to iterate and repeat
+                    One important thing I have learnt was to
+                    <span class="highlight_color bold_md"
+                      >iterate and repeat</span
+                    >
                     on design solutions, once there were new insights and user
                     feedbacks plus to not hesitate and procrastinate even if it
                     was in a high-fidelity design phase.
-                  </li>
-                </ul>
-              </li>
-            </ul>
-            <div class="content_divider_half"></div>
-            <!-- lesson -->
-            <ul>
-              <li>
-                <h4>Are you giving it all during research interviews</h4>
-                <ul>
-                  <li>
-                    I have found that if I were always mindful about my users in
-                    the front and back of my mind during interviews, I would get
-                    better and improve getting detail insights after sitting
-                    more research interviews. Now, I can’t wait to sit a next
-                    one!
                   </li>
                 </ul>
               </li>
@@ -706,6 +679,22 @@
               </li>
             </ul>
             <div class="content_divider_half"></div>
+            <!-- lesson -->
+            <ul>
+              <li>
+                <h4>Are you giving it all during research interviews</h4>
+                <ul>
+                  <li>
+                    I have found that if I were always mindful about my users in
+                    the front and back of my mind during interviews, I would get
+                    better and improve getting detail insights after sitting
+                    more research interviews. Now, I can’t wait to sit a next
+                    one!
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div class="content_divider_half"></div>
             <p>
               But, UX Design is a never ending story and there are still plenty
               of rooms for me to improve to become a designer who puts his users
@@ -718,7 +707,7 @@
         <!-- Style Guide -->
         <div class="case_study_grid typo">
           <div class="title_column">
-            <h3>Style + Accessiblity Guides</h3>
+            <h3>Style Guides</h3>
           </div>
           <div class="main_column typo">
             <div>
@@ -736,6 +725,24 @@
             </div>
           </div>
         </div>
+        <!-- section divider -->
+        <div class="content_divider_lg"></div>
+        <!-- Figma Prototype -->
+        <div id="figma_prototype" class="case_study_grid">
+          <div class="title_column">
+            <h3>Live Prototype</h3>
+          </div>
+          <div class="main_column">
+            <iframe
+              class="figma_proto"
+              style="border: 1.5px solid rgba(0, 0, 0, 0.2)"
+              width="100%"
+              height="650"
+              src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FDVSuJ1loKHWVUSFRhBCcst%2FBookies%3Fpage-id%3D44%253A2%26type%3Ddesign%26node-id%3D1188-28348%26viewport%3D2568%252C223%252C0.15%26t%3DUtx0RFADzk4ad4Ef-1%26scaling%3Dscale-down%26starting-point-node-id%3D1188%253A28348%26mode%3Ddesign"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
 
         <!-- - - - - - - - - - - - - -->
         <!-- end of case study grid -->
@@ -743,23 +750,128 @@
     </section>
     <!-- Content Divider -->
     <div class="content_divider_lg"></div>
-    <!-- Style Guide -->
-    <!-- <section class="case_study_grid thankyou">
+    <!-- Footer section -->
+    <footer class="footer">
       <div class="container">
-        <div class="title_column">
-          <h3 class="uppercase">Thank you for your valuable time :)</h3>
-          <div class="thankyou_wrapper">
+        <div class="footer__header">
+          <div class="footer__img-wrapper">
+            <img
+              src="../../public/images/Footer Portrait.jpg"
+              alt="Portrait picture of the designer"
+            />
+          </div>
+          <h2>Let's Connect!</h2>
+        </div>
+        <div class="footer__divider-line"></div>
+        <div class="footer__details-wrapper">
+          <div class="footer__details-resume">
             <p>
-              Much appreciated for having me take your valuable time and it’d be
-              grateful to hear your feedbacks and suggestions.
+              Hooray! You’ve come to the end of my portfolio and if you would
+              like to get to know me more, check out the links ʕ•́ᴥ•̀ʔっ
             </p>
-            <div>
-              <img src="../../public/assets/icons/Pink Heart.png" alt="" />
+            <div class="footer__resume-link">
+              <p>Here is my</p>
+              <a href="#"><h3>Resume</h3></a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-arrow-up-right"
+              >
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </div>
+          <div class="footer__details-links">
+            <p>
+              I’m open to opportunities and it would be a great pleasure to hear
+              from you! Thank youuuu!
+            </p>
+            <div class="footer__details__links-wrapper">
+              <div class="footer-link">
+                <a href="#"><h3>Email</h3></a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-arrow-up-right"
+                >
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </div>
+              <div class="footer-link">
+                <a href="#"><h3>LinkedIn</h3></a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-arrow-up-right"
+                >
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </div>
+              <div class="footer-link">
+                <a href="#"><h3>Instagram</h3></a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-arrow-up-right"
+                >
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </div>
+              <div class="fab-icon-wrapper">
+                <a href="#">Back to top</a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-arrow-up"
+                >
+                  <line x1="12" y1="19" x2="12" y2="5"></line>
+                  <polyline points="5 12 12 5 19 12"></polyline>
+                </svg>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </section> -->
+    </footer>
 
     <div class="scroll"></div>
     <script type="module" src="../../app.js"></script>

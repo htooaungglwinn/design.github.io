@@ -124,3 +124,9 @@ html.lenis {
   flex-direction: column;
   gap: 2rem;
 }
+
+.two_col {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}

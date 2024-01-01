@@ -12,7 +12,8 @@
   --color-grey-20: #fbfbfb;
   --color-grey-30: #f1f1f1;
   --color-grey-50: #eeeeee;
-  --color-grey-100: #e6e6e6;
+  --color-grey-100: #bebebe;
+  --color-grey-300: #aaaaaa;
   --color-grey-400: #676767;
 
   /* Color - utalities */
@@ -40,5 +41,5 @@
 
   /* FOOTER SECTION */
   --footer-bg-color: var(--color-grey-50);
-  --footer-divider-line: var(--color-grey-02);
+  --footer-divider-line: var(--color-grey-015);
 }

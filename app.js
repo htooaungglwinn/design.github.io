@@ -136,9 +136,7 @@ class App {
   _fadeUpImages() {
     // without onComplete callback, both animations will start at once
     return gsap.to([this.images], {
-      y: 1,
-      opacity: 1,
-      duration: 1.3,
+      duration: 0.3,
       ease: "expos.inout",
       stagger: 0.1,
       onComplete: () => this._animateImages(),
@@ -410,11 +408,11 @@ class App {
         });
       });
     }
-    // Project CTA Events Reveal
-    if (this.project__wrapper) {
-      const projectButton = document.querySelector(".project__cta");
-      console.log(projectButton);
-    }
+    // // Project CTA Events Reveal
+    // if (this.project__wrapper) {
+    //   const projectButton = document.querySelector(".project__cta");
+    //   console.log(projectButton);
+    // }
   } // end of createEvents
 }
 

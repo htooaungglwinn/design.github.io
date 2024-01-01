@@ -4,7 +4,7 @@
 
   /* Color - neutrals */
   --color-white-0: #ffffff;
-  --color-black-400: #121314;
+  --color-black-400: #171717;
 
   /* Color - grey-scale */
   --color-grey-015: rgba(0, 0, 0, 0.15);
@@ -33,13 +33,13 @@
   --text-color-dark: var(--color-black-400);
   --text-color-light: var(--color-grey-20);
 
+  /* Footer Section */
+  --footer-bg-color: var(--color-grey-50);
+  --footer-divider-line: var(--color-grey-015);
+
   /* PROJECT SECTION */
   --project-divider-line: var(--color-grey-015);
   --project-footer-line: var(--color-grey-015);
   --project-cta-border: var(--color-black-400);
-  --cta-color-hover: var(--color-violet-400)
-
-  /* FOOTER SECTION */
-  --footer-bg-color: var(--color-grey-50);
-  --footer-divider-line: var(--color-grey-015);
+  --cta-color-hover: var(--color-violet-400);
 }

@@ -136,7 +136,8 @@ class App {
   _fadeUpImages() {
     // without onComplete callback, both animations will start at once
     return gsap.to([this.images], {
-      duration: 0.3,
+      opacity: 1,
+      duration: 0.6,
       ease: "expos.inout",
       stagger: 0.1,
       onComplete: () => this._animateImages(),

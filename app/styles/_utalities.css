@@ -116,7 +116,15 @@ html.lenis {
 
 .underline {
   text-decoration: underline;
-  padding: p4x 0px;
+  padding: 4px 0px;
+}
+
+.shadow_rg {
+  box-shadow: 6px 8px 12px 0px #12121230;
+}
+
+.border_grey {
+  border: 1.5px solid grey;
 }
 
 .flex_col {

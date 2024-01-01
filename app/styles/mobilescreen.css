@@ -38,7 +38,7 @@
 
   /* FINAL Position */
   .intro__images img:nth-child(1) {
-    top: 10.9vh;
+    top: 13vh;
     right: 8vw;
   }
 
@@ -129,7 +129,6 @@
 
   .project__cta {
     margin: 30px auto;
-    border-bottom: 1.5px solid rgba(0, 0, 0, 0.9);
   }
 
   .project__image {

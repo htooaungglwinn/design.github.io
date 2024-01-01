@@ -335,7 +335,7 @@ class App {
 
         gsap.set(projectHeader, { y: 190 });
         gsap.set(dividerLine, { scaleX: 0, transformOrigin: "left center" });
-        gsap.set(projectCta, { y: 70 });
+        gsap.set(projectCta, { y: 80 });
         gsap.set(footerLine, { scaleX: 0, transformOrigin: "left center" });
         gsap.set(projectSubtitle, { opacity: 0 });
         gsap.set(projectDescription, { opacity: 0 });

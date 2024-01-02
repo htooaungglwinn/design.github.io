@@ -18,8 +18,8 @@ class App {
       console.log("Window dom content are loaded");
     });
 
-    this._createLenis();
-    this._render();
+    // this._createLenis();
+    // this._render();
 
     this._loadInitialState();
     this._createPareallexImages();
@@ -249,7 +249,7 @@ window.addEventListener("load", () => {
   console.log("Window was loaded was ran");
   console.log("Test git code source");
   const app = new App();
-  app._onDocumentLoaded(); // Start Lenis animation after the document is fully loaded
-  app._render(); // Start rendering animation
+  // app._onDocumentLoaded(); // Start Lenis animation after the document is fully loaded
+  // app._render(); // Start rendering animation
   app._createProjects();
 });

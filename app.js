@@ -46,17 +46,6 @@ class App {
     this.lenis.stop();
   }
 
-  // Start Lenis after the document is fully loaded
-  _onDocumentLoaded() {
-    this.lenis.start();
-  }
-
-  // after creating lenis, animate scroll
-  _render(time) {
-    this.lenis.raf(time);
-    requestAnimationFrame(this._render.bind(this));
-  }
-
   // - - - - - - - - - //
   //  Home intro animation  //
   // - - - - - - - - - //
@@ -415,6 +404,17 @@ class App {
     //   console.log(projectButton);
     // }
   } // end of createEvents
+
+  // Start Lenis after the document is fully loaded
+  _onDocumentLoaded() {
+    this.lenis.start();
+  }
+
+  // after creating lenis, animate scroll
+  _render(time) {
+    this.lenis.raf(time);
+    requestAnimationFrame(this._render.bind(this));
+  }
 }
 
 // Initialize App after the document is fully loaded

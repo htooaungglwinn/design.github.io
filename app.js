@@ -257,5 +257,4 @@ window.addEventListener("load", () => {
   console.log("Window was loaded was ran");
   const app = new App();
   app._onDocumentLoaded(); // Start Lenis animation after the document is fully loaded
-  app._render(); // Start rendering animation
 });

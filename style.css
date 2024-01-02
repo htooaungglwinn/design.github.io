@@ -324,7 +324,7 @@ p {
   color: var(--text-color-black);
   /* border-bottom: 2px solid var(--project-cta-border); */
   padding-bottom: 10px;
-  transform: translateY(70px);
+  /* transform: translateY(70px); */
   /* border: 1px solid green; */
 }
 

@@ -40,6 +40,7 @@ class App {
 
   // first, create lenis then redner lenis
   _createLenis() {
+    console.log("Create lenis was ran");
     this.lenis = new Lenis({
       lerp: 0.07,
     });
@@ -50,6 +51,7 @@ class App {
   //  Home intro animation  //
   // - - - - - - - - - //
   _loadInitialState() {
+    console.log("Load initial state was ran");
     // nav images are hidden
     this.navImages.forEach((navImg) => {
       gsap.set(navImg, {
@@ -75,6 +77,7 @@ class App {
   }
 
   _createPareallexImages() {
+    console.log("Create Parallex Images was ran");
     // you have to pass in scrollTrigger object into the timeline
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -98,6 +101,7 @@ class App {
   }
 
   _getFinalState() {
+    console.log("Get Final State was ran");
     // to set images to the initial postitions they will aimate
     this.imagesWrapper.classList.remove("initial");
 
@@ -112,6 +116,7 @@ class App {
   }
 
   _setInitialState() {
+    console.log("Set Initail State was ran");
     // to set images to the initial postitions they will aimate
     this.imagesWrapper.classList.add("initial");
 
@@ -123,6 +128,7 @@ class App {
   }
 
   _fadeUpImages() {
+    console.log("Fade up images was ran");
     // without onComplete callback, both animations will start at once
     return gsap.to([this.images], {
       opacity: 1,
@@ -134,6 +140,7 @@ class App {
   }
 
   _animateImages() {
+    console.log("Animate images was ran");
     // animating with Flip
     Flip.to(this.state, {
       duration: 1.5,
@@ -144,6 +151,7 @@ class App {
   }
 
   _revealContent() {
+    console.log("Reveal content was ran");
     if (this.imagesWrapper) {
       const tl = gsap.timeline({
         defaults: {
@@ -169,6 +177,7 @@ class App {
   }
 
   _revealNav() {
+    console.log("Reveal Nav was ran");
     if (this.imagesWrapper) {
       this.navImages.forEach((navImg) => {
         gsap.to(navImg, {
@@ -178,21 +187,12 @@ class App {
           stagger: 0.8,
         });
       });
-
-      const brandLogo = document.querySelector("#brand_logo");
-
-      brandLogo.addEventListener("mousehover", () => {
-        console.log("event ran");
-        // gsap.to(brandLogo, {
-        //   scale: 1,
-        //   duration: 0.1,
-        // });
-      });
     }
   }
 
   // Pinned section animation
   _createPinnedSection() {
+    console.log("Create Pinned Section was ran");
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".fullwidth-image",
@@ -236,10 +236,12 @@ class App {
   //  Project section  //
   // - - - - - - - - - //
   _createprojects() {
+    console.log("Project data are acquired");
     this.projectList = new ProjectList();
   }
 
   _createProjectSectionTag() {
+    console.log("Crate Project Section Tags was ran");
     function elementFromHtml(html) {
       const template = document.createElement("template");
 
@@ -286,7 +288,7 @@ class App {
         window.location.href = project.pagelink;
       });
 
-      this.projectSection.append(projectListTags);
+      // this.projectSection.append(projectListTags);
 
       //   Project wrapper containers
       // const projectWrapperTags = document.querySelectorAll(".project__wrapper");
@@ -367,51 +369,27 @@ class App {
           tl.play();
         });
 
-        // Project Events
-        // cta_container.addEventListener("mouseover", () => {
-        //   gsap.to(projectHeader, {
-        //     color: "#ff2400",
-        //   });
-        // });
+        // - - - - -  - -
       });
+
+      this.projectSection.append(projectListTags);
       // - - - - - - - - - - - - - - - - - - - - - - - -
     });
   } // end of _createProjectSection
 
   _createEvents() {
-    // Nav Images Hover effects
-    if (this.navImages) {
-      const socialIcons = [...document.querySelectorAll(".icon_container img")];
-
-      socialIcons.forEach((socialIcon) => {
-        socialIcon.addEventListener("mouseover", () => {
-          gsap.to(socialIcon, {
-            opacity: 0.75,
-            duration: 0.15,
-          });
-        });
-        socialIcon.addEventListener("mouseleave", () => {
-          gsap.to(socialIcon, {
-            opacity: 1,
-            duration: 0.1,
-          });
-        });
-      });
-    }
-    // // Project CTA Events Reveal
-    // if (this.project__wrapper) {
-    //   const projectButton = document.querySelector(".project__cta");
-    //   console.log(projectButton);
-    // }
-  } // end of createEvents
+    // end of createEvents
+  }
 
   // Start Lenis after the document is fully loaded
   _onDocumentLoaded() {
+    console.log("On Document Load was ran");
     this.lenis.start();
   }
 
   // after creating lenis, animate scroll
   _render(time) {
+    console.log("Lenis Render was ran");
     this.lenis.raf(time);
     requestAnimationFrame(this._render.bind(this));
   }
@@ -419,6 +397,7 @@ class App {
 
 // Initialize App after the document is fully loaded
 window.addEventListener("load", () => {
+  console.log("Window was loaded was ran");
   const app = new App();
   app._onDocumentLoaded(); // Start Lenis animation after the document is fully loaded
   app._render(); // Start rendering animation

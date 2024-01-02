@@ -10,29 +10,27 @@ class App {
     this.imagesWrapper = document.querySelector(".intro__images");
 
     // this.images = [...this.imagesWrapper.querySelectorAll("img")];
-    if (this.imagesWrapper) {
-      // Declaring Variables
-      this.state = null;
-      this.introSection = document.querySelector(".intro");
-      this.navImages = document.querySelectorAll("#nav img");
-      this.titleLines = 'h1 [data-animation="text-reveal"] > *';
-      this.subTitleLine = 'h3 [data-animation="text-reveal"] > *';
-      this.images = [...this.imagesWrapper.querySelectorAll("img")];
+    // Declaring Variables
+    this.state = null;
+    this.introSection = document.querySelector(".intro");
+    this.navImages = document.querySelectorAll("#nav img");
+    this.titleLines = 'h1 [data-animation="text-reveal"] > *';
+    this.subTitleLine = 'h3 [data-animation="text-reveal"] > *';
+    this.images = [...this.imagesWrapper.querySelectorAll("img")];
 
-      this._loadInitialState();
-      this._createPareallexImages();
-      this._getFinalState();
-      this._setInitialState();
-      this._fadeUpImages();
-      this._createPinnedSection();
+    this._loadInitialState();
+    this._createPareallexImages();
+    this._getFinalState();
+    this._setInitialState();
+    this._fadeUpImages();
+    this._createPinnedSection();
 
-      // Project section
-      this.projectSection = document.querySelector(".projects_section");
+    // Project section
+    this.projectSection = document.querySelector(".projects_section");
 
-      this._createprojects();
-      this._createProjectSectionTag();
-      this._createEvents();
-    }
+    this._createprojects();
+    this._createProjectSectionTag();
+    this._createEvents();
 
     // this._createHomeIntro();
     // this._createProjects();

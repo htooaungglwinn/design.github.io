@@ -4,13 +4,9 @@ gsap.registerPlugin(Flip, ScrollTrigger);
 
 class App {
   constructor() {
-    this._createLenis();
-    this._render();
-
-    this.imagesWrapper = document.querySelector(".intro__images");
-
-    // this.images = [...this.imagesWrapper.querySelectorAll("img")];
     // Declaring Variables
+    this.imagesWrapper = document.querySelector(".intro__images");
+    // this.images = [...this.imagesWrapper.querySelectorAll("img")];
     this.state = null;
     this.introSection = document.querySelector(".intro");
     this.navImages = document.querySelectorAll("#nav img");
@@ -18,32 +14,40 @@ class App {
     this.subTitleLine = 'h3 [data-animation="text-reveal"] > *';
     this.images = [...this.imagesWrapper.querySelectorAll("img")];
 
+    window.addEventListener("load", () => {
+      console.log("Window dom content are loaded");
+    });
+
+    this._createLenis();
+    this._render();
+
     this._loadInitialState();
     this._createPareallexImages();
     this._getFinalState();
     this._setInitialState();
     this._fadeUpImages();
     this._createPinnedSection();
-
-    // Project section
-    this.projectSection = document.querySelector(".projects_section");
-
-    this._createProjects();
-
-    // this._importProjects();
-    // this._createProjectSectionTag();
-    // this._createEvents();
-
-    // this._createHomeIntro();
     // this._createProjects();
   }
 
   // first, create lenis then redner lenis
   _createLenis() {
-    console.log("Create lenis was ran");
     this.lenis = new Lenis({
       lerp: 0.07,
     });
+    this.lenis.stop();
+  }
+
+  // Start Lenis after the document is fully loaded
+  _onDocumentLoaded() {
+    this.lenis.start();
+    console.log("lenis has started");
+  }
+
+  // after creating lenis, animate scroll
+  _render(time) {
+    this.lenis.raf(time);
+    requestAnimationFrame(this._render.bind(this));
   }
 
   // - - - - - - - - - //
@@ -238,18 +242,6 @@ class App {
   _createProjects() {
     this.createProjects = new CreateProjects();
   }
-
-  // Start Lenis after the document is fully loaded
-  _onDocumentLoaded() {
-    console.log("On Document Load was ran");
-    this.lenis.start();
-  }
-
-  // after creating lenis, animate scroll
-  _render(time) {
-    this.lenis.raf(time);
-    requestAnimationFrame(this._render.bind(this));
-  }
 }
 
 // Initialize App after the document is fully loaded
@@ -257,4 +249,6 @@ window.addEventListener("load", () => {
   console.log("Window was loaded was ran");
   const app = new App();
   app._onDocumentLoaded(); // Start Lenis animation after the document is fully loaded
+  app._render(); // Start rendering animation
+  app._createProjects();
 });
